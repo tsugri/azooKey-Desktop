@@ -1,3 +1,19 @@
+# azooKey-Desktop (Extended Layouts Edition)
+
+> [!IMPORTANT]
+> 本リポジトリは [ensan-hcl/azooKey-Desktop](https://github.com/ensan-hcl/azooKey-Desktop) をベースに、
+> macOS標準外の配列を追加したカスタムビルド配布用ソースです。
+> `main` ブランチは開発中の最新コードを含みます。
+>　安定版の[Releases]ブランチをご利用ください。
+
+## 対応配列
+- **Programmer Dvorak (JIS)**
+- **Programmer Dvorak (US)**
+
+
+
+---
+
 # azooKey on macOS
 
 [azooKey](https://github.com/ensan-hcl/azooKey)のmacOS版です。高精度なニューラルかな漢字変換エンジン「Zenzai」を導入した、オープンソースの日本語入力システムです。
