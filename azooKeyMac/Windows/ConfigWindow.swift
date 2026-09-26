@@ -554,6 +554,8 @@ struct ConfigWindow: View {
                     Text("Colemak").tag(Config.KeyboardLayout.Value.colemak)
                     Text("Dvorak").tag(Config.KeyboardLayout.Value.dvorak)
                     Text("Dvorak - QWERTY ⌘").tag(Config.KeyboardLayout.Value.dvorakQwertyCommand)
+                    Text("ProgrammerDvorak_JIS - QWERTY ⌘").tag(Config.KeyboardLayout.Value.programmerDvorakJIS)
+                    Text("ProgrammerDvorak_US - QWERTY ⌘").tag(Config.KeyboardLayout.Value.programmerDvorakUS)
                 }
             } header: {
                 Label("キーボード配列", systemImage: "keyboard.badge.ellipsis")
