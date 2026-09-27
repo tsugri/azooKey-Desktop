@@ -4,11 +4,11 @@
 > 本リポジトリは [ensan-hcl/azooKey-Desktop](https://github.com/ensan-hcl/azooKey-Desktop) をベースに、
 > macOS標準外の配列を追加したカスタムビルド配布用ソースです。
 > `main` ブランチは開発中の最新コードを含みます。
->　安定版の[Releases]ブランチをご利用ください。
+>　安定版の[Release]ブランチをご利用ください。
 
 ## 対応配列
-- **Programmer Dvorak (JIS)**
-- **Programmer Dvorak (US)**
+- **Programmer Dvorak**
+- **Colemak-DH**
 
 
 

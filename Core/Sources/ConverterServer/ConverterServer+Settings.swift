@@ -110,8 +110,10 @@ extension ConverterServer {
                     .init(title: "Colemak", value: .string(Config.KeyboardLayout.Value.colemak.rawValue)),
                     .init(title: "Dvorak", value: .string(Config.KeyboardLayout.Value.dvorak.rawValue)),
                     .init(title: "Dvorak - QWERTY Command", value: .string(Config.KeyboardLayout.Value.dvorakQwertyCommand.rawValue)),
-                    .init(title: "ProgrammerDvorak_JIS - QWERTY Command", value: .string(Config.KeyboardLayout.Value.programmerDvorakJIS.rawValue)),
-                    .init(title: "ProgrammerDvorak_US - QWERTY Command", value: .string(Config.KeyboardLayout.Value.programmerDvorakUS.rawValue))
+                    .init(title: "ProgrammerDvorak(JIS) - QWERTY Command", value: .string(Config.KeyboardLayout.Value.programmerDvorakJIS.rawValue)),
+                    .init(title: "ProgrammerDvorak(US) - QWERTY Command", value: .string(Config.KeyboardLayout.Value.programmerDvorakUS.rawValue)),
+                    .init(title: "Colemak-DH(JIS) - QWERTY Command", value: .string(Config.KeyboardLayout.Value.ColemakDHJIS.rawValue)),
+                    .init(title: "Colemak-DH(US) - QWERTY Command", value: .string(Config.KeyboardLayout.Value.ColemakDHUS.rawValue))
                 ]),
                 value: .string(Config.KeyboardLayout().value.rawValue)
             ),
