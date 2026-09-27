@@ -5,6 +5,6 @@
 > 不具合・ご要望等は本家ではなく、本リポジトリの Issues までお願いいたします。
 
 ## 対応配列
-- **Programmer Dvorak (JIS)**
-- **Programmer Dvorak (US)**
+- **Programmer Dvorak**
+- **Colemak-DH**
 

@@ -184,6 +184,8 @@ extension Config {
             case dvorakQwertyCommand
             case programmerDvorakJIS
             case programmerDvorakUS
+            case ColemakDHJIS
+            case ColemakDHUS
 
             public var layoutIdentifier: String {
                 /// 【独自の keyRemapTable を持つ配列を追加する際の注意】
@@ -214,6 +216,10 @@ extension Config {
                 case .programmerDvorakJIS:
                     return "com.apple.keylayout.Romaji"
                 case .programmerDvorakUS:
+                    return "com.apple.keylayout.US"
+                case .ColemakDHJIS:
+                    return "com.apple.keylayout.Romaji"
+                case .ColemakDHUS:
                     return "com.apple.keylayout.US"
                 }
             }
@@ -294,7 +300,7 @@ extension Config {
                         "a":"a", "s":"o", "d":"e", "f":"u", "g":"i", "h":"d", "j":"h", "k":"t", "l":"n", ";":"s", ":":"-", "]":"$",
                         "z":"'", "x":"q", "c":"j", "v":"k", "b":"x", "n":"b", "m":"m", ",":"w", ".":"v", "/":"z", "\\":"\\",
                         "-":"!", "^":"#", "¥":"¥",
-                        
+
                         // JIS配列 Shifted
                         "!":"%", "\"":"7", "#":"5", "$":"3", "%":"1", "&":"9", "'":"0", "(":"2", ")":"4", "=":"8", "~":"`", "|":"|",
                         "Q":":", "W":"<", "E":">", "R":"P", "T":"Y", "Y":"F", "U":"G", "I":"C", "O":"R", "P":"L", "`":"?", "{":"^",
@@ -309,12 +315,52 @@ extension Config {
                         "a":"a", "s":"o", "d":"e", "f":"u", "g":"i", "h":"d", "j":"h", "k":"t", "l":"n", ";":"s", "'":"-",
                         "z":"'", "x":"q", "c":"j", "v":"k", "b":"x", "n":"b", "m":"m", ",":"w", ".":"v", "/":"z", "\\":"\\",
                         "-":"!", "=":"#",
-                        
+
                         // US配列 Shifted
                         "!":"%", "@":"7", "#":"5", "$":"3", "%":"1", "^":"9", "&":"0", "*":"2", "(":"4", ")":"6", "_":"8", "+":"`",
                         "Q":":", "W":"<", "E":">", "R":"P", "T":"Y", "Y":"F", "U":"G", "I":"C", "O":"R", "P":"L", "{":"?", "}":"^",
                         "A":"A", "S":"O", "D":"E", "F":"U", "G":"I", "H":"D", "J":"H", "K":"T", "L":"N", ":":"S", "\"":"_",
                         "Z":"\"", "X":"Q", "C":"J", "V":"K", "B":"X", "N":"B", "M":"M", "<":"W", ">":"V", "?":"Z", "|":"|"
+                    ]
+                case .ColemakDHJIS:
+                    return [
+                        // Q, W, A, G, Z, X, C はQWERTYと同じであるため変換不要
+                        // JIS配列 Unshifted
+                        "e": "f", "r": "p", "t": "b",
+                        "y": "j", "u": "l", "i": "u", "o": "y", "p": ";",
+                        "s": "r", "d": "s", "f": "t",
+                        "h": "m", "j": "n", "k": "e", "l": "i", ";": "o",
+                        "v": "d", "b": "v",
+                        "n": "k", "m": "h",
+
+                        // JIS配列 Shifted
+                        "E": "F", "R": "P", "T": "B",
+                        "Y": "J", "U": "L", "I": "U", "O": "Y", "P": ":",
+                        "S": "R", "D": "S", "F": "T",
+                        "H": "M", "J": "N", "K": "E", "L": "I",
+                        "+": "O",
+                        "V": "D", "B": "V",
+                        "N": "K", "M": "H"
+                    ]
+                case .ColemakDHUS:
+                    return [
+                        // Q, W, A, G, Z, X, C はQWERTYと同じであるため変換不要
+                        // US配列 Unshifted
+                        "e": "f", "r": "p", "t": "b",
+                        "y": "j", "u": "l", "i": "u", "o": "y", "p": ";",
+                        "s": "r", "d": "s", "f": "t",
+                        "h": "m", "j": "n", "k": "e", "l": "i", ";": "o",
+                        "v": "d", "b": "v",
+                        "n": "k", "m": "h",
+
+                        // US配列 Shifted
+                        "E": "F", "R": "P", "T": "B",
+                        "Y": "J", "U": "L", "I": "U", "O": "Y", "P": ":",
+                        "S": "R", "D": "S", "F": "T",
+                        "H": "M", "J": "N", "K": "E", "L": "I",
+                        ":": "O",
+                        "V": "D", "B": "V",
+                        "N": "K", "M": "H"
                     ]
                 default:
                     // QWERTYなどの標準配列
